@@ -72,4 +72,4 @@ class Todo {
   }
 }
 
-export default Todo;
+export default new Todo();

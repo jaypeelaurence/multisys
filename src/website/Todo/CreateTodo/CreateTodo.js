@@ -15,9 +15,7 @@ const CreateTodo = () => {
   } = useStores();
 
   async function onSubmit(todoInput) {
-    const todo = new Todo();
-
-    const result = await todo.create(todoInput);
+    const result = await Todo.create(todoInput);
 
     addTodos(result);
 

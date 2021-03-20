@@ -14,8 +14,6 @@ const title = "Update A Todo";
 const Update = () => {
   let content = <Loading />;
 
-  const apiTodo = new Todo();
-
   const { id } = useRouter().query;
 
   const router = useRouter();
@@ -25,7 +23,7 @@ const Update = () => {
   } = useStores();
 
   async function onSubmit(todoInput) {
-    const result = await apiTodo.update({ id, title: todoInput.title });
+    const result = await Todo.update({ id, title: todoInput.title });
     updateTodos(result);
 
     router.push("/");

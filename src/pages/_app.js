@@ -11,8 +11,7 @@ const App = ({ Component, pageProps }) => {
 
   useEffect(async () => {
     if (!isset) {
-      const todo = new Todo();
-      const getTodo = await todo.get();
+      const getTodo = await Todo.get();
 
       resetTodos(getTodo);
     }
